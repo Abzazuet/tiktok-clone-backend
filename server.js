@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import Data from "./seeds.js";
 import Videos from "./dbModel.js";
 const app = express(); // Instatiate our server
-const port = 9000; // Select port
+const port = process.env.PORT || 9000; // Port or own port
 
 // app config
 
@@ -11,7 +11,7 @@ const port = 9000; // Select port
 app.use(express.json());
 // Whenever we receive a request, accept all the request
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*"),
+  res.setHeader("Access-Control-Allow-Origin", "*"),
     res.setHeader("Access-Control-Allow-Headers", "*"),
     next();
 });
