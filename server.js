@@ -11,8 +11,8 @@ const port = 9000; // Select port
 app.use(express.json());
 // Whenever we receive a request, accept all the request
 app.use((req, res, next) => {
-  res.setHeaders("Access-Control-Allow-Origin", "*"),
-    res.setHeaders("Access-Control-Allow-Headers", "*"),
+    res.setHeader("Access-Control-Allow-Origin", "*"),
+    res.setHeader("Access-Control-Allow-Headers", "*"),
     next();
 });
 // db config
