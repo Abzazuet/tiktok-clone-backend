@@ -6,7 +6,7 @@ const app = express(); // Instatiate our server
 const port = process.env.PORT || 9000; // Port or own port
 
 // app config
-
+app.use(Cors());
 // middlewares
 app.use(express.json());
 // Whenever we receive a request, accept all the request
